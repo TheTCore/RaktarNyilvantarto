@@ -1,0 +1,44 @@
+/* 
+    Created on : 2014.11.25., 11:53:42
+    Author     : rych
+*/
+
+body {
+  margin: 0;
+}
+
+#header {
+  background-color: #c194f5;
+  padding: 10px 20px;
+}
+#header h1#sitename {
+  margin: 0;
+}
+
+#content {
+  padding: 10px 20px;
+  background-color: #ede8be;
+}
+
+.news {
+  margin-bottom: 15px;
+}
+.news .title {
+  border-bottom: 1px solid #555;
+  color: #555;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.news .text {
+  margin: 5px 0;
+}
+.news .date {
+  text-align: right;
+  font-style: italic;
+}
+
+#footer {
+  background-color: #7b0603;
+  color: white;
+  padding: 10px 20px;
+}

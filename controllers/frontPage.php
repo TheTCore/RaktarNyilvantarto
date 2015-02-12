@@ -6,6 +6,6 @@ $pageTitle = "Kezdőlap";
 $query = "SELECT * FROM `news`";
 $news = $db->query($query);
 if ($db->errno) {
-  die($db->error);
+    die($db->error);
 }
 

@@ -1,6 +1,6 @@
-        <div id="footer">
-            Készítette KM &copy; 2014
-        </div>
-        
-    </body>
+<div id="footer">
+      Készítette: CSD &copy; 2014
+    </div>
+
+  </body>
 </html>

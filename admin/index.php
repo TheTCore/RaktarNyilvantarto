@@ -22,15 +22,16 @@ switch ($page) {
     include('controllers/newsPage.php');
     include('views/newsPage.php');
     break; 
+  case 'felhasznalok':
+    include('controllers/usersPage.php');
+    include('views/usersPage.php');
+    break; 
   case 'kijelentkezes':
-	unset($_SESSION['logged']);
+	//session_regenerate_id(false);
+	session_unset();
     include('controllers/loginPage.php');
     include('views/loginPage.php');
-    break;
-  case 'users':
-      include 'controllers/usersPage.php';
-      include 'views/usersPage.php';
-      break;
+    break; 
   default:
     include('controllers/loginPage.php');
     include('views/loginPage.php');

@@ -1,69 +1,59 @@
-<?php include ('includes/header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <div id="content">
-    <?php if (isset($_SESSION['msg'])) : ?>
+  <h2>Felhasználók kezelése</h2>
+  
+	<?php if (isset($_SESSION['msg'])) : ?>
 	
-	<p><?php print($_SESSION['msg']); unset($_SESSION['msg']); ?></p>
-	<br>
-	<ul id="navigation" class="nav nav-pills">
-      <li role="presentation"><a href="?q=users">Új felhasználó</a></li>
-    </ul>
-<?php else : ?>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            padding: 8px;
-            border-color: #666666
-        }
-        
-        th{
-            background-color: #dedede;
-        }
-        
-        td{
-            background-color: #FFFFFF;
-        }
-    </style>
-
-    
-    <?php
-// Create connection
-    $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
-// Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM users";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        echo "<table><tr><th>ID</th><th>Username</th><th>Password</th></tr>";
-        // output data of each row
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["id"] . "</td><td>" . $row["uname"] . "</td><td> " . $row["upass"] . "</td></tr>";
-        }
-        echo "</table>";
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
-    ?> 
-
-
-
-
-    <h2>Új felhasználó</h2>
-    <form name="usersForm" method="post">
-        <label>Felhasználónév:</label><br>
-        <input type="text" name="userName"><br>
-        <label>Jelszó:</label><br>
-        <input type="password" name="userPass"><br>
-        <input type="submit" name="userSubmit">
-    </form>
-    
-    <?php endif; ?>
-    
+		<p><?php print($_SESSION['msg']); unset($_SESSION['msg']); ?></p>
+		<br>
+		<ul id="navigation" class="nav nav-pills">
+			<li role="presentation"><a href="?q=felhasznalok">Új felhasználó</a></li>
+		</ul>
+	
+	<?php else : ?>
+	
+		<?php if ($_SESSION['rights']==1) : ?>
+	
+			<form name="usersForm" method="post" id="newsForm">
+				<label>Felhasználónév:</label>
+				<br>
+				<input type="text" name="uname" class="shortText">
+				<br>
+				<label>Jelszó:</label>
+				<br>
+				<input type="text" name="upass" class="shortText">
+				<br>
+				<label>Név:</label>
+				<br>
+				<input type="text" name="name" class="shortText">
+				<br>
+				<label>Email:</label>
+				<br>
+				<input type="text" name="email" class="shortText">
+				<br>
+				<label>Jogosultsági kör:</label>
+				<br>
+				<select name="rights">
+				<?php 
+					foreach ($rights as $right) {
+						echo '<option value="'.$right['id'].'">'.$right['description'].'</option>';
+					}
+				?>
+				</select>
+				<br>
+				<input type="submit" name="usersSubmit">
+			</form>
+			
+		<?php else : ?>
+		
+			<p>Nincs jogosultsága az oldal megtekintéséhez.</p>
+		
+		<?php endif; ?>
+		
+	<?php endif; ?>
+	
 </div>
 
-<?php include ('includes/footer.php');?>
+<?php
+include('includes/footer.php');

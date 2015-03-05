@@ -12,7 +12,7 @@ body {
   padding: 10px 20px;
 }
 #header h1#sitename {
-  margin: 0;
+  margin: 30px 0 30px 0;
 }
 
 #content {
@@ -41,4 +41,31 @@ body {
   background-color: #7b0603;
   color: white;
   padding: 10px 20px;
+}
+
+#header #navigation a {
+    color: black;
+    background: white;
+}
+#header #navigation a:hover {
+    color: black;
+    background: #dddddd;
+}
+
+/*
+	news modul
+*/
+
+.shortText {
+  width: 450px;
+}
+
+.leadText {
+  width: 450px;
+  height: 50px;
+}
+
+.longText {
+  width: 450px;
+  height: 200px;
 }

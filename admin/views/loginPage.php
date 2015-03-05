@@ -4,7 +4,7 @@
 
 	<?php if (isset($_SESSION['logged'])) : ?>
 	
-	<p>Üdv az admin oldalon!</p>
+	<p>Üdv az admin oldalon, <?php echo $_SESSION['name']; ?>!</p>
 	
 	<?php else : ?>
 	
@@ -17,6 +17,7 @@
     <label>Jelszó:</label>
     <br>
     <input type="password" name="uPass">
+	<br>
     <input type="submit" name="loginSubmit">
   </form>
   

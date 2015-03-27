@@ -5,24 +5,9 @@
             
             <?php echo $page['text']; ?>
             
-            <h3>Üzenetküldés:</h3>    
-            <form name="contactForm" method="post">
-                <label>Név:</label>
-                <br>
-                <input type="text" name="contactName">
-                <br>
-                <label>e-mail:</label>
-                <br>
-                <input type="email" name="contactEmail">
-                <br>
-                <label>Üzenet:</label>
-                <br>
-                <textarea name="contactMessage">Üzenj itt!</textarea>
-                <br>
-                <input type="submit" name="contactSubmit">
-            </form>
-            
-            <p>Google map
+            <b>Üzemeltető: Császár Dávid</b><br>
+            <b>Telefon: 06/30 666 6666</b><br>
+            <b>E-mail: le3tcore@gmail.com</b>
             
         </div>
 

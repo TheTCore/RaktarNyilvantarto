@@ -2,15 +2,12 @@
         
         <div id="content">
             <h2>Kezdőlap</h2>
-            <?php
-                foreach ($news as $item){
-                    echo '<div class="news">';
-                    echo '<div class="title">' .$item['title'].'</div>';
-                    echo '<div class="text">' .$item['text'].'</div>';
-                    echo '<div class="date">' .$item['date'].'</div>';
-                    echo '</div>';
-                }
-            ?>
+            
+            A weboldalon a beregisztrált raktárak listája található.<br>
+            Új raktárak és termékek felviteléhez regisztráció szükséges.<br>
+            Regisztráció után egy weboldal üzemelető jogosultsággal rendelkező
+            felhasználónak aktiválnia kell a felhasználót a megfelelő jogosultságokkal.<br>
+            
             
         </div>
         

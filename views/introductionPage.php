@@ -1,7 +1,7 @@
 <?php include('includes/header.php'); ?>
        
         <div id="content">
-            <h2><?php echo $page['title']; ?></h2>
+            <h2><?php echo $pageTitle; ?></h2>
             
             <h2>Üdv az oldalon!</h2>
             <br>
@@ -10,8 +10,6 @@
             A szolgáltatás telljesen ingyenes és biztonságos.<br>
             Remélem nem töltöttem 47 évemet feleslegesen az oldal fejlesztésével!<br>
             Használjátok egészséggel!
-            
-            <?php echo $page['text']; ?>
             
         </div>
         

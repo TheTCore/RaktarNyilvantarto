@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: 127.0.0.1
--- Létrehozás ideje: 2015. Már 31. 11:54
+-- Létrehozás ideje: 2015. Máj 01. 14:23
 -- Szerver verzió: 5.6.21
 -- PHP verzió: 5.6.3
 
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone` varchar(20) COLLATE utf8_hungarian_ci NOT NULL,
   `rights` tinyint(4) NOT NULL DEFAULT '4',
   `active` tinyint(4) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `users`
@@ -140,7 +140,8 @@ INSERT INTO `users` (`id`, `uname`, `upass`, `name`, `email`, `phone`, `rights`,
 (5, 'tesztelek', '$1$Ky..LQ..$yk73L4TwWAqzHEWy0JY/U1', 'Teszt Elek', 'tesztelek@gmail.com', '', 3, 1),
 (6, 'TCore', '$1$Ch2.jF..$kbfv4n4eRi9gkI.iLRvsj.', 'Császár Dávid', 'le3tcore@gmail.com', '', 1, 1),
 (7, 'Test', '$1$7k0.Cs0.$oLh7SgwRjXW32f.d5dvdF/', 'Boby Bob', 'nope@yep.com', '', 4, 0),
-(8, 'tcore2', '$1$7X..Cj0.$iVh7CQqleLkMODEmMYZUV.', 'Nope Yep', 'lel@kek.pogchamp', '', 4, 0);
+(8, 'tcore2', '$1$7X..Cj0.$iVh7CQqleLkMODEmMYZUV.', 'Nope Yep', 'lel@kek.pogchamp', '', 4, 0),
+(9, 'admin', '$1$f6..6O1.$r9q8LBDlbi/OP/nIz/Ut/1', 'Adminisztrátor', 'sample@text.com', '06705486958', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -189,7 +190,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- Megkötések a kiírt táblákhoz
 --
